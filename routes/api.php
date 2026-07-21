@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\FlashSaleController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
@@ -10,6 +11,10 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
+
+Route::prefix('customer')->group(function () {
+    Route::get('/', [CustomerController::class, 'index']);
+});
 
 Route::prefix('flash-sale')->group(function () {
     Route::get('/', [FlashSaleController::class, 'index']);
