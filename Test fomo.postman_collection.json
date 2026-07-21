@@ -1,0 +1,432 @@
+{
+	"info": {
+		"_postman_id": "684db66d-6b84-40fc-b68e-8e4982b7b609",
+		"name": "Test fomo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6751918"
+	},
+	"item": [
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "getById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{accept}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "{{contenttype}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}product/1",
+							"host": [
+								"{{baseurl}}product"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}product",
+							"host": [
+								"{{baseurl}}product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"kuluku\",\n    \"code\" : \"883089128\",\n    \"price\" : 200000,\n    \"stock\" : 10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}product",
+							"host": [
+								"{{baseurl}}product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{accept}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "{{contenttype}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"Product 1\",\n    \"code\" : \"883089128\",\n    \"price\" : 200000,\n    \"stock\" : 10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}product/21",
+							"host": [
+								"{{baseurl}}product"
+							],
+							"path": [
+								"21"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{accept}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "{{contenttype}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseurl}}product/21",
+							"host": [
+								"{{baseurl}}product"
+							],
+							"path": [
+								"21"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "flashsale",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{accept}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "{{contenttype}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseurl}}flash-sale",
+							"host": [
+								"{{baseurl}}flash-sale"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{accept}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "{{contenttype}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"code\": \"FLASH-001\",\n    \"product_id\": 11,\n    \"start_date\": \"2026-07-25 08:00:00\",\n    \"end_date\": \"2026-07-25 23:59:59\",\n    \"qty\": 5,\n    \"flashsale_price\": 7500000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}flash-sale",
+							"host": [
+								"{{baseurl}}flash-sale"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{accept}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "{{contenttype}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"code\": \"FLASH-0001\",\n    \"product_id\": 11,\n    \"start_date\": \"2026-07-25 08:00:00\",\n    \"end_date\": \"2026-07-25 23:59:59\",\n    \"qty\": 5,\n    \"flashsale_price\": 50000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}flash-sale/1",
+							"host": [
+								"{{baseurl}}flash-sale"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "orders",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{accept}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "{{contenttype}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"customer_id\" : 1,\n    \"items\" :[\n        {\n            \"product_id\" : 12,\n            \"qty\": 1\n        },\n        {\n            \"product_id\" : 11,\n            \"qty\": 1\n        }\n    ]\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}order",
+							"host": [
+								"{{baseurl}}order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{accept}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "{{contenttype}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseurl}}order",
+							"host": [
+								"{{baseurl}}order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{accept}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "{{contenttype}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseurl}}order",
+							"host": [
+								"{{baseurl}}order"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "customer",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{accept}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "{{contenttype}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseurl}}/customer",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"customer"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseurl",
+			"value": ""
+		},
+		{
+			"key": "accept",
+			"value": ""
+		},
+		{
+			"key": "contenttype",
+			"value": ""
+		}
+	]
+}
